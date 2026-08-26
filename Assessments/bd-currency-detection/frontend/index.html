@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bangladeshi Currency Detector</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">🇧🇩</div>
+
+            <h1>Bangladeshi Currency Detector</h1>
+
+            <p>
+                Upload a Bangladeshi Taka note and detect its denomination
+                using YOLOv11.
+            </p>
+        </header>
+
+
+        <main>
+
+            <!-- Upload Section -->
+            <section class="upload-card">
+
+                <div id="drop-area">
+
+                    <div class="upload-icon">
+                        📷
+                    </div>
+
+                    <h2>Upload Currency Image</h2>
+
+                    <p>
+                        JPG, JPEG or PNG
+                    </p>
+
+                    <input
+                        type="file"
+                        id="file-input"
+                        accept=".jpg,.jpeg,.png"
+                        hidden
+                    >
+
+                    <button id="choose-button">
+                        Choose Image
+                    </button>
+
+                </div>
+
+
+                <!-- Image Preview -->
+
+                <div id="preview-container" class="hidden">
+
+                    <img
+                        id="preview-image"
+                        alt="Currency preview"
+                    >
+
+                    <p id="file-name"></p>
+
+                    <button id="detect-button">
+                        Detect Currency
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Loading -->
+
+            <div id="loading" class="hidden">
+
+                <div class="spinner"></div>
+
+                <p>Detecting currency...</p>
+
+            </div>
+
+
+            <!-- Results -->
+
+            <section
+                id="result-section"
+                class="result-card hidden"
+            >
+
+                <h2>Detection Result</h2>
+
+                <div id="results"></div>
+
+            </section>
+
+
+            <!-- Error -->
+
+            <div
+                id="error-message"
+                class="error hidden"
+            ></div>
+
+        </main>
+
+
+        <footer>
+
+            <p>
+                Powered by FastAPI + YOLOv11
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
